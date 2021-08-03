@@ -1,1 +1,1 @@
-Storage for personal projects in Bash Shell, C, Python and SQL.
+Storage for personal projects with Bash Scripts, C, Python and SQL.
