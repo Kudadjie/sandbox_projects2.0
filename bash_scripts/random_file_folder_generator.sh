@@ -10,16 +10,13 @@ ct=$(date +"%T")
 generated_name=$ct.$cd
 
 echo "File or folder?"
-echo "Use only lowercase or uppercase throughout."
 read answer
 
-case $answer in
-     "FOLDER") mkdir "${generated_name}"
-               echo "An empty directory named "${generated_name}" has been created!";;
+ans_fix=$(echo $answer | awk '{print tolower($0)}')
+
+case $ans_fix in
      "folder") mkdir "${generated_name}"
-               echo "An empty folder named "${generated_name}" has been created!";;
-     "FILE") touch "${generated_name}"
-               echo "An empty file named "${generated_name}" has been created!";;
+               echo "An empty directory named "${generated_name}" has been created!";;
      "file") touch "${generated_name}"
                echo "An empty file named "${generated_name}" has been created!";;
      *) echo "Invalid input!"
