@@ -34,6 +34,6 @@ av_space(){
 }
 
 percent_space_used(){
-    df -h / | head -2 | tail -1 | awk '{print $5}'
+    df -h / | head -2 | tail -1 | awk '{print $5}' | cut -d'%' -f1
     
 }
