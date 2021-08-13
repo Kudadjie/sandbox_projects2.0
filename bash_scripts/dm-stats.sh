@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#free_memory: prints out free memory
+#used_memory: prints out used memory
+#av_memory: prints out total available memory
+#free_space: prints out unused disk space on primary hard drive
+#used_space: prints out used disk space on primary hard drive
+#av_space: prints out total available disk space on primary hard drive
+
+
 free_memory (){
     
     free -h | head -2 | tail -1 | awk '{print $4}'
